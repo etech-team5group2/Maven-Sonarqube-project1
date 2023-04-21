@@ -24,7 +24,7 @@ pipeline {
             sh 'mvn test'
         }
     }
-    stage('code quality'){
+    stage('sonarscanner'){
       steps{
       sh "mvn clean verify sonar:sonar \
   -Dsonar.projectKey=team5codereview \
